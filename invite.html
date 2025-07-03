@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Перенаправление в бот</title>
+  <script>
+    window.onload = () => {
+      const params = new URLSearchParams(window.location.search);
+      const ref = params.get("ref");
+
+      if (ref) {
+        window.location.href = `https://t.me/GLORY_MARKET_bot?start=${ref}`;
+      } else {
+        document.body.innerHTML = "<h1>Ошибка: нет ID пригласителя</h1>";
+      }
+    };
+  </script>
+</head>
+<body>
+  <h1>Перенаправляем в Telegram…</h1>
+</body>
+</html>
